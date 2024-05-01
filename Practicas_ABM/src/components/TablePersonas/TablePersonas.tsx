@@ -87,7 +87,7 @@ export const TablePersonas = (
 
   // Función para formatear fechas
   const dateFormater = (dateJava: string) => {
-    const date = new Date(dateJava);
+    const date = new Date(dateJava + "T00:00:00");
     const formatedDate = date.toLocaleDateString('es-AR', dateFormatOptions);
     return formatedDate;
   }
