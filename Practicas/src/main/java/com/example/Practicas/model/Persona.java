@@ -1,5 +1,6 @@
 package com.example.Practicas.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -16,11 +17,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Persona extends Base{
-    private String email;
+public class Persona extends Base {
+    @Column(name = "nombre")
     private String firstName;
+    @Column(name = "apellido")
     private String lastName;
-    private String phoneNumber;
-    private String adress;
+    @Column(name = "fecha_nac")
     private LocalDate birthdate;
+    @Column(name = "direccion")
+    private String adress;
+    @Column(name = "telefono")
+    private String phoneNumber;
+    @Column(name = "email")
+    private String email;
 }

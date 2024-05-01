@@ -25,8 +25,6 @@ public class PracticasApplication {
 	CommandLineRunner init() {
 		return args -> {
 			LocalDate localDate = LocalDate.of(1996,6,30);
-			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-
 
 			Persona persona1 = Persona.builder()
 					.firstName("Nicolas")
@@ -34,7 +32,7 @@ public class PracticasApplication {
 					.email("nvelasco@utn.com")
 					.phoneNumber("2616556565")
 					.adress("Calle 123")
-					.birthdate()
+					.birthdate(localDate)
 					.build();
 			personaRepository.save(persona1);
 		};
